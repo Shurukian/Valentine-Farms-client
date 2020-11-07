@@ -12,6 +12,46 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <header class="container-header">
+        <section>
+          <h1>Valentine Farms</h1>
+          </section>
+            <section>
+              <form id="sign-up-form">
+                <legend>Sign up</legend>
+                  <label for="sign-up">Email</label>
+                  <input id="sign=up" type="Email" name="credentials[email]" placeholder="Email" />
+                  <label for="sign-up-password">Password</label>
+                  <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password" />
+                  <label for="sign-password-confirm">Confirm Password</label>
+                  <input id="sign-up-password-confirmation"type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" />
+                  <input type="submit" value="Sign up" />
+              </form>
+            </section>
+            <section>
+              <form id="sign-in-form">
+                <legend>Sign In</legend>
+                  <label for="sign-in">Email</label>
+                  <input id="sign-in" type="Email" name="credentials[email]" placeholder="Email" />
+                  <label for="sign-in-password">Password</label>
+                  <input id="sign-in-password" type="password" name="credentials[password]" placeholder='Password' />
+                  <input type="submit" value="Sign in" />
+              </form>
+            </section>
+            <section>
+              <form id="sign-out-form">
+                <legend>Sign Out</legend>
+                <input type="submit" value="Sign out" />
+              </form>
+            </section>
+            <section>
+              <form id="change-password-form">
+                <legend>Change Password</legend>
+                  <input type="password" name="passwords[old]" placeholder="Old Password" />
+                  <input type="password" name="passwords[new]" placeholder="New Password" />
+                  <input type="submit" value="Change Password" />
+              </form>
+            </section>
+      </header>
     </body>
 </html>
