@@ -19,4 +19,5 @@ $(() => {
   $('#create-form-group').on('submit', productEvents.createProduct)
   $('#get-products').on('click', productEvents.getProducts)
   $('#update-products').on('submit', productEvents.updateProducts)
+  $('#delete-products').on('submit', productEvents.deleteProducts)
 })

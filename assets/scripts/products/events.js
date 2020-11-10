@@ -43,8 +43,21 @@ const updateProducts = event => {
     .catch(ui.onError)
 }
 
+const deleteProducts = event => {
+  console.log('Delete Products is firing')
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.deleteProducts(formData)
+    .then(ui.deleteProductsSuccess)
+    .catch(ui.onError)
+}
+
 module.exports = {
   createProduct,
   getProducts,
-  updateProducts
+  updateProducts,
+  deleteProducts
 }

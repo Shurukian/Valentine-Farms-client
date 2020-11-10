@@ -38,8 +38,20 @@ const updateProducts = formData => {
   })
 }
 
+const deleteProducts = formData => {
+  return $.ajax({
+    url: config.apiUrl + '/products/' + formData.product.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: formData
+  })
+}
+
 module.exports = {
   createProduct,
   getProducts,
-  updateProducts
+  updateProducts,
+  deleteProducts
 }

@@ -30,6 +30,11 @@ const getProductSuccess = res => {
 
 const updateProductsSuccess = res => {
   console.log('You have successfully updated your products')
+  $('#message').text('You have successfully updated your product!')
+}
+
+const deleteProductsSuccess = res => {
+  console.log('You have deleted your products')
 }
 
 const onError = () => {
@@ -41,5 +46,6 @@ module.exports = {
   createProductSuccess,
   getProductSuccess,
   updateProductsSuccess,
+  deleteProductsSuccess,
   onError
 }
