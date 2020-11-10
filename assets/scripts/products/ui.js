@@ -12,27 +12,24 @@ const getProductSuccess = res => {
   const user = store.user
   const products = res.products
 
-  $('#products-display').html(`<h3>${user.email} Here is a list of the items that you have posted:
+  $('#display-products').html(`<h3>${user.email} Here is a list of the items that you have posted:
     ${products.length}</h3>`)
 
   products.forEach(products => {
     const productHTML = (`
+      <p>Product ID: ${products._id}
       <h4>Name: ${products.name}</h4>
       <p>Expiration: ${products.expiration}</p>
       <p>Quality: ${products.isOrganic}</p>
       <p>Quantity: ${products.quantity}</p>
       <br>
     `)
-    $('#products-display').append(productHTML)
+    $('#display-products').append(productHTML)
   })
+}
 
-  // const answer = () => {
-  //   if (res.product.isOrganic === true) {
-  //     return ‘yes’
-  //   } else {
-  //     return ‘No’
-  //   }
-  // }
+const updateProductsSuccess = res => {
+  console.log('You have successfully updated your products')
 }
 
 const onError = () => {
@@ -43,5 +40,6 @@ const onError = () => {
 module.exports = {
   createProductSuccess,
   getProductSuccess,
+  updateProductsSuccess,
   onError
 }

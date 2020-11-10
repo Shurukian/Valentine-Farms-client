@@ -79,7 +79,7 @@
                 <!-- boolean for responding whether a product is organic or not -->
               <div class="form-group">
                 <label for="quality">Product Quality:</label>
-                <select class="form-control" name="product[isOrganic]"id="product-quality" placeholder="Is it Organic?">
+                <select class="form-control" type="text" name="product[isOrganic]"id="product-quality" placeholder="Is it Organic?">
                   <option>Is it Organic?</option>
                   <option>Yes</option>
                   <option>No</option>
@@ -88,7 +88,7 @@
                 <!-- this is a drop down for the quantity of the product -->
               <div class="form-group">
                 <label for="quantity">Quantity:</label>
-                <input class="form-control" name="product[quantity]" id="product-quantity" placeholder="Amount of Product">
+                <input class="form-control" type="text" name="product[quantity]" id="product-quantity" placeholder="Amount of Product">
               </div>
               <div>
               <input type="submit" value="Add Product">
@@ -98,7 +98,21 @@
             <button id="get-products">View all Products</button>
           </section>
           <br>
-          <div id="products-display">
+          <h3>Update Products</h3>
+          <form id="update-products">
+            <input required type="text" name="product[id]" placeholder="Product ID" />
+            <input required type="text" name="product[name]" placeholder="Product Name" />
+            <input required type="text" name="product[expiration]" placeholder="Product Expiration" />
+            <input required type="text" name="product[isOrganic]" placeholder="Product Quality" />
+            <input required type="text" name="product[quantity]" placeholder="Product Quantity" />
+            <input type="submit" value="Update Product" />
+          </form>
+          <br>
+          <h3>Delete Products</h3>
+          <form>
+            <input required type="text" name="product[id]" placeholder="Product ID">
+          </form>
+          <div id="display-products">
             <h2>Products</h2>
           </div>
       </header>

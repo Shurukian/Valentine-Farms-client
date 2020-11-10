@@ -4,18 +4,19 @@ const config = require('../config')
 const store = require('../store')
 
 // (Create) listing a new product
-const createProduct = data => {
+const createProduct = formData => {
   return $.ajax({
     url: config.apiUrl + '/products',
     method: 'POST',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: data
+    data: formData
   })
 }
 
-const getProducts = data => {
+// Index the products that have been created
+const getProducts = () => {
   return $.ajax({
     url: config.apiUrl + '/products',
     method: 'GET',
@@ -25,7 +26,20 @@ const getProducts = data => {
   })
 }
 
+// Update existing products
+const updateProducts = formData => {
+  return $.ajax({
+    url: config.apiUrl + '/products/' + formData.product.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: formData
+  })
+}
+
 module.exports = {
   createProduct,
-  getProducts
+  getProducts,
+  updateProducts
 }
