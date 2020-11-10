@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API="https://tic-tac-toe-api-development.herokuapp.com"
+API="http://localhost:4741"
 URL_PATH="/sign-in"
 
 curl "${API}${URL_PATH}" \
