@@ -1,1 +1,15 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  font-family: 'Arvo', serif;
+  background-color: #2F4454;
+  color: white;
+}
+
+.container {
+  background-color: #1C3334;
+}
+.header-container {
+  background-color: #376E6F;
+  color: #1C3334;
+}

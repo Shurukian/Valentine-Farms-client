@@ -38,6 +38,7 @@ const updateProducts = formData => {
   })
 }
 
+// Destroy an existing product
 const deleteProducts = formData => {
   return $.ajax({
     url: config.apiUrl + '/products/' + formData.product.id,

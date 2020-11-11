@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Valentine Farms</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap" rel="stylesheet">
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -13,12 +14,19 @@
     </head>
     <body>
       <header class="container">
-        <section class="row">
-          <h1>Valentine Farms</h1>
+        <div class="row header-container">
+          <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <h1>Valentine Farms</h1>
+            </div>
+          <div class="col-md-4"></div>
+        </div>
           <br>
+        <div class="row">
+          <div class="col-md-3">
             <p>
               <form id="sign-up-form">
-                <legend>Sign up</legend>
+               <legend>Sign up</legend>
                   <label for="sign-up">Email</label>
                   <input id="sign=up" type="Email" name="credentials[email]" placeholder="Email" />
                   <label for="sign-up-password">Password</label>
@@ -39,10 +47,11 @@
                   <input type="submit" value="Sign in" />
               </form>
             </p>
-            <br>
+          </div>
+          <div class="col-md-6 message">message here</div>
+          <div class="col-md-3">
             <p>
               <form id="sign-out-form">
-                <legend>Sign Out</legend>
                 <input type="submit" value="Sign out" />
               </form>
             </p>
@@ -50,72 +59,80 @@
             <p>
               <form id="change-password-form">
                 <legend>Change Password</legend>
-                  <input type="password" name="passwords[old]" placeholder="Old Password" />
-                  <input type="password" name="passwords[new]" placeholder="New Password" />
-                  <input type="submit" value="Change Password" />
+                <input type="password" name="passwords[old]" placeholder="Old Password" />
+                <input type="password" name="passwords[new]" placeholder="New Password" />
+                <input type="submit" value="Change Password" />
               </form>
             </p>
-          </section>
-          <div>List a Product</div>
-
-          <section>
-            <form id="create-form-group">
-                <!-- this is a text box for the name of the product to be listed -->
-              <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" name="product[name]"class="form-control" id="product-name" placeholder="Product Name">
-              </div>
-                <!-- this is a drop down for the expiration date for the product -->
-                <!-- https://mdbootstrap.com/docs/jquery/forms/date-picker/ -->
-                <!-- <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
-                <input placeholder="Select date" type="text" id="example" class="form-control">
-                <label for="example">Try me...</label>
-                <i class="fas fa-calendar input-prefix" tabindex=0></i>
-              </div> -->
-              <div class="form-group">
-                <label for="expiration">Expiration Date:</label>
-                <input type="text" name="product[expiration]"class="form-control" id="product-expiration" placeholder="Product Expiration Date">
-              </div>
-                <!-- boolean for responding whether a product is organic or not -->
-              <div class="form-group">
-                <label for="quality">Product Quality:</label>
-                <select class="form-control" type="text" name="product[isOrganic]"id="product-quality" placeholder="Is it Organic?">
-                  <option>Is it Organic?</option>
-                  <option>Yes</option>
-                  <option>No</option>
-                </select>
-              </div>
-                <!-- this is a drop down for the quantity of the product -->
-              <div class="form-group">
-                <label for="quantity">Quantity:</label>
-                <input class="form-control" type="text" name="product[quantity]" id="product-quantity" placeholder="Amount of Product">
-              </div>
-              <div>
-              <input type="submit" value="Add Product">
-              </div>
-            </form>
-            <br>
-            <button id="get-products">View all Products</button>
-          </section>
-          <br>
-          <h3>Update Products</h3>
-          <form id="update-products">
-            <input required type="text" name="product[id]" placeholder="Product ID" />
-            <input required type="text" name="product[name]" placeholder="Product Name" />
-            <input required type="text" name="product[expiration]" placeholder="Product Expiration" />
-            <input required type="text" name="product[isOrganic]" placeholder="Product Quality" />
-            <input required type="text" name="product[quantity]" placeholder="Product Quantity" />
-            <input type="submit" value="Update Product" />
-          </form>
-          <br>
-          <h3>Delete Products</h3>
-          <form id="delete-products">
-            <input required type="text" name="product[id]" placeholder="Product ID" />
-            <input type="submit" value="Delete" />
-          </form>
-          <div id="display-products">
-            <h2>Products</h2>
           </div>
+        </div>
+        <br>
+        <div class="row">
+            <!-- <section> -->
+            <div class="col-md-4"></div>
+              <div class="col-md-8">
+                <h3>List a Product</h3>
+                <br>
+                <form id="create-form-group">
+                    <!-- this is a text box for the name of the product to be listed -->
+                  <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="product[name]"class="form-control" id="product-name" placeholder="Product Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="expiration">Expiration Date:</label>
+                    <input type="text" name="product[expiration]"class="form-control" id="product-expiration" placeholder="Product Expiration Date">
+                  </div>
+                    <!-- responding whether a product is organic or not -->
+                  <div class="form-group">
+                    <label for="quality">Product Quality:</label>
+                    <select class="form-control" type="text" name="product[isOrganic]" id="product-quality" placeholder="Is it Organic?">
+                      <option>Is it Organic?</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                    <!-- this is a drop down for the quantity of the product -->
+                  <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input class="form-control" type="text" name="product[quantity]" id="product-quantity" placeholder="Amount of Product">
+                  </div>
+                  <div>
+                  <input type="submit" value="Add Product">
+                  </div>
+                </form>
+                </div>
+
+                <br>
+
+                <div class="col-md-12">
+                <br>
+                  <button id="get-products">View all Products</button>
+
+                <br>
+                <h3>Update Products</h3>
+                <form id="update-products">
+                  <input required type="text" name="product[id]" placeholder="Product ID" />
+                  <input required type="text" name="product[name]" placeholder="Product Name" />
+                  <input required type="text" name="product[expiration]" placeholder="Product Expiration" />
+                  <input required type="text" name="product[isOrganic]" placeholder="Product Quality" />
+                  <input required type="text" name="product[quantity]" placeholder="Product Quantity" />
+                  <input type="submit" value="Update Product" />
+                </form>
+                <br>
+                <h3>Delete Products</h3>
+                <form id="delete-products">
+                  <input required type="text" name="product[id]" placeholder="Product ID" />
+                  <input type="submit" value="Delete" />
+                </form>
+              </div>
+            <!-- </section> -->
+          <h2>Products</h2>
+            <br>
+        </div class="row">
+            <div class="col-md-8" id="display-products">Product Discription here</div>
+            <div class="col-md-4">Product photos here</div>
+        </div>
       </header>
     </body>
 </html>
