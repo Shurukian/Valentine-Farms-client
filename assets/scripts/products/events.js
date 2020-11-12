@@ -6,7 +6,6 @@ const api = require('./api')
 
 // post a new product to the app
 const createProduct = event => {
-  console.log('Create Product is firing')
   event.preventDefault()
 
   const form = event.target
@@ -19,7 +18,6 @@ const createProduct = event => {
 
 // get information on existing products on the app
 const getProducts = event => {
-  console.log('Get products is firing')
   event.preventDefault()
 
   const form = event.target
@@ -32,7 +30,6 @@ const getProducts = event => {
 
 // update the information on an existing product
 const updateProducts = event => {
-  console.log('Update Products is firing')
   event.preventDefault()
 
   const form = event.target
@@ -44,7 +41,6 @@ const updateProducts = event => {
 }
 
 const deleteProducts = event => {
-  console.log('Delete Products is firing')
   event.preventDefault()
 
   const form = event.target

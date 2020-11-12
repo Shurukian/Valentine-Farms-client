@@ -3,12 +3,10 @@
 const store = require('../store')
 
 const createProductSuccess = res => {
-  console.log('You have successfully listed your product!')
-  $('#message').text('Thank you for listing your product')
+  $('#res-message').html('Thank you for listing your product')
 }
 
 const getProductSuccess = res => {
-  console.log('You have successfully got your posted products!')
   const user = store.user
   const products = res.products
 
@@ -29,16 +27,15 @@ const getProductSuccess = res => {
 }
 
 const updateProductsSuccess = res => {
-  console.log('You have successfully updated your products')
-  $('#message').text('You have successfully updated your product!')
+  $('#res-message').html('You have successfully updated your product!')
 }
 
 const deleteProductsSuccess = res => {
-  console.log('You have deleted your products')
+  $('#res-message').html('Your Product has been successfully removed.')
 }
 
 const onError = () => {
-  $('#error-message').text('An error has occured, Please try again.')
+  $('#error-message').html('An error has occured, Please try again.')
   $('form').trigger('reset')
 }
 

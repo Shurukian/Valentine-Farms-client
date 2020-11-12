@@ -20,4 +20,9 @@ $(() => {
   $('#get-products').on('click', productEvents.getProducts)
   $('#update-products').on('submit', productEvents.updateProducts)
   $('#delete-products').on('submit', productEvents.deleteProducts)
+
+  // showing and hiding
+  $('#sign-out-form').hide()
+  $('#change-password-button').hide()
+  $('#products-control-all').hide()
 })
