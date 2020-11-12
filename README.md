@@ -8,12 +8,12 @@ front-end frameworks included.
 
 ## Installation
 
-1. [Download](../../archive/master.zip) this template.
+1. [Download](../../archive/main.zip) this template.
     - **Do Not Fork And Clone**
     - Click the "Clone or Download" button and select "Download Zip".
 1. Move to the `sei/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-1. Rename the template directory from `browser-template-master` to
+    `unzip /Users/<user-name>/Downloads/browser-template-main.zip`.
+1. Rename the template directory from `browser-template-main` to
     `<project-name>-client`.
 1. Empty [`README.md`](README.md) and fill with your own content.
 1. Replace all instances of `valentine-farms-client` with the name of
@@ -114,7 +114,7 @@ Developers should run these often!
 - `grunt <server|serve|s>`: generates bundles, watches, and livereloads
 - `grunt build`: place bundled styles and scripts where `index.html` can find
     them
-- `grunt deploy`: builds and deploys master branch
+- `grunt deploy`: builds and deploys main branch
 
 
 ## Additional Resources
