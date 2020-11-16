@@ -34,7 +34,7 @@ const changePasswordSuccess = res => {
 
 const onError = () => {
   $('#error-message').html('An error has occured, Please try again.')
-  $('form').trigger('reset')
+  $('#form').trigger('reset')
 }
 
 module.exports = {
