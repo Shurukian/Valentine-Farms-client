@@ -20,8 +20,8 @@ const signInSuccess = res => {
   $('#sign-out-form').show()
   $('#sign-up-button').hide()
   $('#sign-in-button').hide()
-  $('#signInModal').hide()
-  $('#signUpModal').hide()
+  $('#signInModalButton').hide()
+  $('#signUpModalButton').hide()
   $('#products-control-all').show()
 
   // Resets!
