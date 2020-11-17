@@ -6,6 +6,7 @@ const createProductSuccess = res => {
   $('#create-form-group').trigger('reset')
   $('#update-products').trigger('reset')
   $('#delete-products').trigger('reset')
+  $('#close-form').trigger('reset')
 }
 
 const getProductSuccess = res => {
@@ -30,6 +31,7 @@ const getProductSuccess = res => {
   $('#create-form-group').trigger('reset')
   $('#update-products').trigger('reset')
   $('#delete-products').trigger('reset')
+  $('#close-form').trigger('reset')
 }
 
 const updateProductsSuccess = res => {
@@ -39,6 +41,7 @@ const updateProductsSuccess = res => {
   $('#create-form-group').trigger('reset')
   $('#update-products').trigger('reset')
   $('#delete-products').trigger('reset')
+  $('#close-form').trigger('reset')
 }
 
 const deleteProductsSuccess = res => {
