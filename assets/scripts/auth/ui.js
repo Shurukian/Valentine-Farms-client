@@ -2,19 +2,33 @@
 const store = require('../store')
 
 const signUpSuccess = res => {
-  $('#res-message').html('Thanks for signing up')
+  $('#message').html('Thanks for signing up')
+
+  // Resets!
   $('#sign-up-form').trigger('reset')
+  $('#sign-in-form').trigger('reset')
+  $('#change-password-form').trigger('reset')
+  $('#create-form-group').trigger('reset')
+  $('#update-products').trigger('reset')
+  $('#delete-products').trigger('reset')
 }
 
 const signInSuccess = res => {
   store.user = res.user
-  $('#res-message').html('You have successfully signed in!')
+  $('#message').html('You have successfully signed in!')
   $('#change-password-button').show()
   $('#sign-out-form').show()
   $('#sign-up-button').hide()
   $('#sign-in-button').hide()
   $('#products-control-all').show()
+
+  // Resets!
+  $('#sign-up-form').trigger('reset')
   $('#sign-in-form').trigger('reset')
+  $('#change-password-form').trigger('reset')
+  $('#create-form-group').trigger('reset')
+  $('#update-products').trigger('reset')
+  $('#delete-products').trigger('reset')
 }
 
 const signOutSuccess = res => {
@@ -24,17 +38,39 @@ const signOutSuccess = res => {
   $('#sign-in-button').show()
   $('#products-control-all').hide()
   $('#display-products').empty()
-  $('#res-message').html('We hope to see you back soon!')
+  $('#message').html('We hope to see you back soon!')
+
+  // Resets!
+  $('#sign-up-form').trigger('reset')
+  $('#sign-in-form').trigger('reset')
+  $('#change-password-form').trigger('reset')
+  $('#create-form-group').trigger('reset')
+  $('#update-products').trigger('reset')
+  $('#delete-products').trigger('reset')
 }
 
 const changePasswordSuccess = res => {
-  $('#res-message').html('Your password has been successfully changed!')
-  $('#form').trigger('reset')
+  $('#message').html('Your password has been successfully changed!')
+
+  // Resets!
+  $('#sign-up-form').trigger('reset')
+  $('#sign-in-form').trigger('reset')
+  $('#change-password-form').trigger('reset')
+  $('#create-form-group').trigger('reset')
+  $('#update-products').trigger('reset')
+  $('#delete-products').trigger('reset')
 }
 
 const onError = () => {
-  $('#error-message').html('An error has occured, Please try again.')
-  $('#form').trigger('reset')
+  $('#message').html('An error has occured, Please try again.')
+
+  // Resets!
+  $('#sign-up-form').trigger('reset')
+  $('#sign-in-form').trigger('reset')
+  $('#change-password-form').trigger('reset')
+  $('#create-form-group').trigger('reset')
+  $('#update-products').trigger('reset')
+  $('#delete-products').trigger('reset')
 }
 
 module.exports = {

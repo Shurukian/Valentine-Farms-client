@@ -3,7 +3,11 @@
 const store = require('../store')
 
 const createProductSuccess = res => {
-  $('#res-message').html('Thank you for listing your product')
+  $('#message').html('Thank you for listing your product')
+  // Triggers!
+  $('#create-form-group').trigger('reset')
+  $('#update-products').trigger('reset')
+  $('#delete-products').trigger('reset')
 }
 
 const getProductSuccess = res => {
@@ -24,19 +28,38 @@ const getProductSuccess = res => {
     `)
     $('#display-products').append(productHTML)
   })
+
+  // Triggers!
+  $('#create-form-group').trigger('reset')
+  $('#update-products').trigger('reset')
+  $('#delete-products').trigger('reset')
 }
 
 const updateProductsSuccess = res => {
-  $('#res-message').html('You have successfully updated your product!')
+  $('#message').html('You have successfully updated your product!')
+
+  // Triggers!
+  $('#create-form-group').trigger('reset')
+  $('#update-products').trigger('reset')
+  $('#delete-products').trigger('reset')
 }
 
 const deleteProductsSuccess = res => {
-  $('#res-message').html('Your Product has been successfully removed.')
+  $('#message').html('Your Product has been successfully removed.')
+
+  // Triggers!
+  $('#create-form-group').trigger('reset')
+  $('#update-products').trigger('reset')
+  $('#delete-products').trigger('reset')
 }
 
 const onError = () => {
-  $('#error-message').html('An error has occured, Please try again.')
-  $('form').trigger('reset')
+  $('#message').html('An error has occured, Please try again.')
+
+  // Triggers!
+  $('#create-form-group').trigger('reset')
+  $('#update-products').trigger('reset')
+  $('#delete-products').trigger('reset')
 }
 
 module.exports = {

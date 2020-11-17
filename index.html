@@ -41,14 +41,14 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form id="sign-up-form form">
+                    <form id="sign-up-form">
                         <input id="sign=up" type="Email" name="credentials[email]" placeholder="Email" />
                         <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password" />
                         <input id="sign-up-password-confirmation"type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" />
                         <!-- <input type="submit" value="Sign up" /> -->
                         <br>
                         <div class="modal-footer">
-                          <button type="submit" id="sign-up-button" class="btn btn-primary">Sign Up</button>
+                          <button type="submit" id="sign-up-button" class="btn btn-primary form-reset">Sign Up</button>
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </form>
@@ -84,11 +84,11 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form id="sign-in-form form">
+                    <form id="sign-in-form">
                           <input id="sign-in" type="Email" name="credentials[email]" placeholder="Email" />
                           <input id="sign-in-password" type="password" name="credentials[password]" placeholder='Password' />
                         <div class="modal-footer">
-                          <button type="submit" id="sign-in-button" class="btn btn-primary">Sign In</button>
+                          <button type="submit" id="sign-in-button" class="btn btn-primary form-reset">Sign In</button>
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </form>
@@ -108,7 +108,7 @@
               </form> -->
           </div>
 
-          <div id="res-message error-message"class="col-md-6"></div>
+          <div id="message"class="col-md-6"></div>
 
           <div class="col-md-3" id="sign-out-col">
                       <!-- Sign Out Button Trigger -->
@@ -116,7 +116,7 @@
               Sign Out
             </button> -->
 
-              <form id="sign-out-form form">
+              <form id="sign-out-form">
                 <input type="submit" class="color" value="Sign out" />
               </form>
 
@@ -136,11 +136,11 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form id="change-password-form form">
+                    <form id="change-password-form">
                           <input type="password" name="passwords[old]" placeholder="Old Password" />
                           <input type="password" name="passwords[new]" placeholder="New Password" />
                         <div class="modal-footer">
-                          <button type="submit" id="change-password-button" class="btn btn-primary">Change Password</button>
+                          <button type="submit" id="change-password-button" class="btn btn-primary form-reset">Change Password</button>
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </form>
@@ -309,15 +309,15 @@
                         <input required type="text" name="product[id]" placeholder="Product ID" />
                         <!-- <input type="submit" class="color" value="Delete" /> -->
                           <!-- <input type="submit" class="color" value="Update Product" /> -->
-                            <div class="modal-footer">
-                              <button type="submit" class="btn btn-primary">Delete Product</button>
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </form>
-                      </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Delete Product</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                      </form>
                     </div>
                   </div>
                 </div>
+              </div>
                 <!-- End Update Products Modal -->
 
 
