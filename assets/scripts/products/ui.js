@@ -1,7 +1,5 @@
 'use strict'
 
-const store = require('../store')
-
 const createProductSuccess = res => {
   $('#message').html('Thank you for listing your product')
   // Triggers!
@@ -11,7 +9,6 @@ const createProductSuccess = res => {
 }
 
 const getProductSuccess = res => {
-  const user = store.user
   const products = res.products
 
   $('#display-products').html(`<h3>Here is a list of the items that have been posted:
