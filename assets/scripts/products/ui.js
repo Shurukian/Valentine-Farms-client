@@ -14,7 +14,7 @@ const getProductSuccess = res => {
   const user = store.user
   const products = res.products
 
-  $('#display-products').html(`<h3>${user.email} Here is a list of the items that you have posted:
+  $('#display-products').html(`<h3>Here is a list of the items that have been posted:
     ${products.length}</h3>`)
 
   products.forEach(products => {
