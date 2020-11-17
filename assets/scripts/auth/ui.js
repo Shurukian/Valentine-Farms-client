@@ -38,6 +38,8 @@ const signOutSuccess = res => {
   $('#sign-out-form').hide()
   $('#sign-up-button').show()
   $('#sign-in-button').show()
+  $('#signInModalButton').show()
+  $('#signUpModalButton').show()
   $('#products-control-all').hide()
   $('#display-products').empty()
   $('#message').html('We hope to see you back soon!')
