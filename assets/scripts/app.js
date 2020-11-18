@@ -25,4 +25,9 @@ $(() => {
   $('#sign-out-form').hide()
   $('#change-password-button').hide()
   $('#products-control-all').hide()
+
+  // Modals form reset
+  $('.modal').on('hidden.bs.modal', function () {
+    $(this).find('form')[0].reset()
+  })
 })
