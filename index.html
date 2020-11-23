@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Valentine Farms</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap" rel="stylesheet">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <header class="container">
+        <div class="row header-container">
+          <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <h1>Valentine Farms</h1>
+            </div>
+          <div class="col-md-4"></div>
+        </div>
+          <br>
+        <div class="row">
+          <div class="col-md-3" id="sign-up-col">
+
+                      <!-- Sign Up Button trigger modal -->
+            <button type="button" id="signUpModalButton" class="btn btn-primary btn-sm color close-form" data-toggle="modal" data-target="#signUpModal">
+
+              Sign Up
+            </button>
+
+            <!-- Sign Up Modal -->
+            <div class="modal fade" id="signUpModal" data-keyboard="false" data-backdrop="static" tabindex="-1" aria-labelledby="signUpLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="signUpLabel">Sign Up</h4>
+                    <button type="button" class="close close-form" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="sign-up-form">
+                        <input id="sign=up" type="Email" name="credentials[email]" placeholder="Email" />
+                        <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password" />
+                        <input id="sign-up-password-confirmation"type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" />
+                        <!-- <input type="submit" value="Sign up" /> -->
+                        <br>
+                        <div class="modal-footer">
+                          <button type="submit" id="sign-up-button" class="btn btn-primary form-reset">Sign Up</button>
+                          <button type="button" class="btn btn-secondary close-form" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Sign Up Modal -->
+              <!-- <form id="sign-up-form">
+               <legend>Sign up</legend>
+                  <label for="sign-up">Email</label>
+                  <input id="sign=up" type="Email" name="credentials[email]" placeholder="Email" />
+                  <label for="sign-up-password">Password</label>
+                  <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password" />
+                  <label for="sign-password-confirm">Confirm Password</label>
+                  <input id="sign-up-password-confirmation"type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" />
+                  <input type="submit" value="Sign up" />
+              </form> -->
+                      <!-- Sign In Button trigger modal -->
+            <button type="button" id="signInModalButton" class="btn btn-primary btn-sm pull-right color" data-toggle="modal" data-target="#signInModal">
+              Sign In
+            </button>
+
+            <!-- Sign In Modal -->
+            <div class="modal fade" id="signInModal" data-keyboard="false" data-backdrop="static" tabindex="-1" aria-labelledby="signInLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="signInLabel">Sign In</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="sign-in-form">
+                          <input id="sign-in" type="Email" name="credentials[email]" placeholder="Email" />
+                          <input id="sign-in-password" type="password" name="credentials[password]" placeholder='Password' />
+                        <div class="modal-footer">
+                          <button type="submit" id="sign-in-button" class="btn btn-primary form-reset">Sign In</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Sign In Modal -->
+
+              <!-- <form id="sign-in-form">
+                <legend>Sign In</legend>
+                  <label for="sign-in">Email</label>
+                  <input id="sign-in" type="Email" name="credentials[email]" placeholder="Email" />
+                  <label for="sign-in-password">Password</label>
+                  <input id="sign-in-password" type="password" name="credentials[password]" placeholder='Password' />
+                  <input type="submit" value="Sign in" />
+              </form> -->
+          </div>
+
+          <div id="message"class="col-md-6"></div>
+
+          <div class="col-md-3" id="sign-out-col">
+                      <!-- Sign Out Button Trigger -->
+            <!-- <button type="submit" id="sign-out-button" class="btn btn-primary btn-sm color">
+              Sign Out
+            </button> -->
+
+              <form id="sign-out-form">
+                <input type="submit" class="color" value="Sign out" />
+              </form>
+
+                      <!-- Change Password Button trigger modal -->
+            <button type="button" id="change-password-button" class="btn btn-primary btn-sm pull-right color close-form" data-toggle="modal" data-target="#changePasswordModal">
+              Change Password
+            </button>
+
+            <!-- Change Password Modal -->
+            <div class="modal fade" id="changePasswordModal" data-keyboard="false" data-backdrop="static" tabindex="-1" aria-labelledby="changePasswordLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="changePasswordLabel">Change Password</h4>
+                    <button type="button" class="close close-form" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="change-password-form">
+                          <input type="password" name="passwords[old]" placeholder="Old Password" />
+                          <input type="password" name="passwords[new]" placeholder="New Password" />
+                        <div class="modal-footer">
+                          <button type="submit" id="change-password-button" class="btn btn-primary form-reset">Change Password</button>
+                          <button type="button" class="btn btn-secondary close-form" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Change Password Modal -->
+
+              <!-- <form id="change-password-form">
+                <legend>Change Password</legend>
+                <input type="password" name="passwords[old]" placeholder="Old Password" />
+                <input type="password" name="passwords[new]" placeholder="New Password" />
+                <input type="submit" value="Change Password" />
+              </form> -->
+          </div>
+        </div>
+        <br>
+        <div class="row" id="products-control-all">
+            <!-- <section> -->
+            <div class="col-md-4"></div>
+              <div class="col-md-8 products-control">
+
+                            <!-- List Product Button trigger modal -->
+                  <button type="button" id="list-product-button" class="btn btn-primary btn-sm pull-right color" data-toggle="modal" data-target="#listProductModal">
+                    List a Product
+                  </button>
+
+                  <!-- List Product Modal -->
+                  <div class="modal fade" id="listProductModal" data-keyboard="false" data-backdrop="static" tabindex="-1" aria-labelledby="listProductLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title" id="listProductLabel">List Product</h4>
+                          <button type="button" class="close close-form" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="create-form-group">
+                              <!-- this is a text box for the name of the product to be listed -->
+                            <div class="form-group">
+                              <label for="name">Name:</label>
+                              <input type="text" name="product[name]"class="form-control" id="product-name" placeholder="Product Name">
+                            </div>
+                            <div class="form-group">
+                              <label for="expiration">Expiration Date:</label>
+                              <input type="text" name="product[expiration]"class="form-control" id="product-expiration" placeholder="Product Expiration Date">
+                            </div>
+                              <!-- responding whether a product is organic or not -->
+                            <div class="form-group">
+                              <label for="quality">Product Quality:</label>
+                              <select class="form-control" type="text" name="product[isOrganic]" id="product-quality" placeholder="Is it Organic?">
+                                <option>Is it Organic?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                              </select>
+                            </div>
+                              <!-- this is a drop down for the quantity of the product -->
+                            <div class="form-group">
+                              <label for="quantity">Quantity:</label>
+                              <input class="form-control" type="text" name="product[quantity]" id="product-quantity" placeholder="Amount of Product">
+                            </div>
+                            <!-- <div>
+                            <input type="submit" class="color" value="Add Product">
+                            </div> -->
+                              <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">List Product</button>
+                                <button type="button" class="btn btn-secondary close-form" data-dismiss="modal">Close</button>
+                              </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <br>
+                  </div>
+
+                  <div>
+                    <button id="get-products" class="color">View all Products</button>
+                  </div>
+                <!-- <form id="create-form-group"> -->
+                    <!-- this is a text box for the name of the product to be listed -->
+                  <!-- <div class="form-group"> -->
+                    <!-- <label for="name">Name:</label>
+                    <input type="text" name="product[name]"class="form-control" id="product-name" placeholder="Product Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="expiration">Expiration Date:</label>
+                    <input type="text" name="product[expiration]"class="form-control" id="product-expiration" placeholder="Product Expiration Date">
+                  </div>
+                    <!- responding whether a product is organic or not -->
+                  <!-- <div class="form-group">
+                    <label for="quality">Product Quality:</label>
+                    <select class="form-control" type="text" name="product[isOrganic]" id="product-quality" placeholder="Is it Organic?">
+                      <option>Is it Organic?</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                    <!- this is a drop down for the quantity of the product -->
+                  <!-- <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input class="form-control" type="text" name="product[quantity]" id="product-quantity" placeholder="Amount of Product">
+                  </div>
+                  <div>
+                  <input type="submit" class="color" value="Add Product">
+                  </div>  -->
+                <!-- </form> -->
+
+
+                        <!-- Update Products Button trigger modal -->
+                <button type="button" id="update-products-button" class="btn btn-primary btn-sm pull-right color" data-toggle="modal" data-target="#updateProductsModal">
+                Update Products
+                </button>
+
+                <!-- Update Products Modal -->
+                <div class="modal fade" id="updateProductsModal" data-keyboard="false" data-backdrop="static" tabindex="-1" aria-labelledby="updateProductsLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="updateProductsLabel">Update Products</h4>
+                        <button type="button" class="close close-form" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="update-products">
+                          <input required type="text" name="product[id]" placeholder="Product ID" />
+                          <input required type="text" name="product[name]" placeholder="Product Name" />
+                          <input required type="text" name="product[expiration]" placeholder="Product Expiration" />
+                          <input required type="text" name="product[isOrganic]" placeholder="Is it Organic" />
+                          <input required type="text" name="product[quantity]" placeholder="Product Quantity" />
+                          <!-- <input type="submit" class="color" value="Update Product" /> -->
+                            <div class="modal-footer">
+                              <button type="submit" class="btn btn-primary">Update Product</button>
+                              <button type="button" class="btn btn-secondary close-form" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Update Products Modal -->
+
+
+                        <!-- Delete Products Button trigger modal -->
+                <button type="button" id="delete-products-button" class="btn btn-primary btn-sm pull-right color" data-toggle="modal" data-target="#deleteProductsModal">
+                Delete Products
+                </button>
+
+                <!-- Update Products Modal -->
+                <div class="modal fade" id="deleteProductsModal" data-keyboard="false" data-backdrop="static" tabindex="-1" aria-labelledby="deleteProductsLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      <div class="modal-header">ikol
+                        <h4 class="modal-title" id="deleteProductsLabel">Delete Products</h4>
+                        <button type="button" class="close close-form" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                      <form id="delete-products">
+                        <input required type="text" name="product[id]" placeholder="Product ID" />
+                        <!-- <input type="submit" class="color" value="Delete" /> -->
+                          <!-- <input type="submit" class="color" value="Update Product" /> -->
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Delete Product</button>
+                            <button type="button" class="btn btn-secondary close-form" data-dismiss="modal">Close</button>
+                          </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!-- End Update Products Modal -->
+
+
+
+              </div>
+            </div>
+                <!-- <form id="update-products">
+                  <input required type="text" name="product[id]" placeholder="Product ID" />
+                  <input required type="text" name="product[name]" placeholder="Product Name" />
+                  <input required type="text" name="product[expiration]" placeholder="Product Expiration" />
+                  <input required type="text" name="product[isOrganic]" placeholder="Product Quality" />
+                  <input required type="text" name="product[quantity]" placeholder="Product Quantity" />
+                  <input type="submit" class="color" value="Update Product" />
+                </form> -->
+                <!-- <h3>Delete Products</h3>
+                <form id="delete-products">
+                  <input required type="text" name="product[id]" placeholder="Product ID" />
+                  <input type="submit" class="color" value="Delete" />
+                </form>
+              </div> -->
+            <!-- </section> -->
+
+      </header>
+      <div class="container">
+        <br>
+        <div class="row">
+          <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <h2>Products</h2>
+            </div>
+          <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-8" id="display-products"></div>
+            <div class="col-md-4"></div>
+        </div>
+      </div>
+    </body>
+</html>
